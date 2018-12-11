@@ -1,0 +1,161 @@
+* {
+    font-family: "product sans";
+    font-size: 105%;
+    font-weight: bold;
+}
+
+table,
+td,
+tr {
+    width: 550px;
+    padding: 10px;
+    border-color: black;
+    border-width: medium;
+}
+
+#text {
+    position: relative;
+    background: transparent;
+    margin: 5px;
+    border: 0px;
+    border-bottom: 0.5px solid #A9A9A9;
+    color: black;
+    width: 250px;
+    transition: width 500ms ease-in-out;
+}
+
+#text:focus {
+    outline: 0px;
+    animation-name: toGreen;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    width: 110%;
+}
+
+#btn {
+    border-radius: 4px;
+    background-color: #4CAF50;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 13px;
+    width: 150px;
+    transition: all 400ms;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 400ms;
+}
+
+#btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 400ms;
+}
+
+#btn:hover span {
+    padding-right: 25px;
+}
+
+#btn:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+#btn:hover {
+    background-color: #3E8E41;
+}
+
+@keyframes toGreen {
+    from {
+        border-bottom: 0.5px solid #A9A9A9;
+        color: black;
+    }
+
+    to {
+        border-bottom: 1px solid #4CAF50;
+        color: #4CAF50;
+    }
+}
+
+fieldset {
+    width: 250px;
+    border: 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#btn:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, .5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+#btn:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+.ripple {
+    overflow: hidden;
+}
+
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background: white;
+
+    animation: ripple-animation 2s;
+}
+
+
+@keyframes ripple-animation {
+    from {
+        transform: scale(1);
+        opacity: 0.4;
+    }
+
+    to {
+        transform: scale(100);
+        opacity: 0;
+    }
+}
+
+.info {
+    float: left
+}
+
+.cover {
+    float: right;
+    height: 800px;
+    width: 600px;
+}
+
+.item {
+    display: block;
+    height: 150px;
+    margin: 3px;
+    width: 98%;
+    text-align-last: center;
+}
+
+.cover {
+    border-style: solid;
+    margin: 10px;
+}

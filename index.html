@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div>
+        <div class="info">
+            <form>
+                <fieldset>
+                    <table>
+                        <tr>
+                            <td id="title">Title</td>
+                            <td>
+                                <div class="form-group">
+                                    <input required id="text" class="form-control title" name="title" placeholder="Book title"
+                                        type="text" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Book subtitle</td>
+                            <td>
+                                <div class="form-group">
+                                    <input required id="text" class="subtitle form-control" name="subtitle" placeholder="Book subtitle"
+                                        type="text" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Author name</td>
+                            <td>
+                                <div class="form-group">
+                                    <input required id="text" class="author form-control" name="author" placeholder="Author name"
+                                        type="text" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Background color</td>
+                            <td>
+                                <div class="form-group">
+                                    <input required id="text" class="color form-control" name="bg_color" placeholder="Background color"
+                                        type="color" value="#FFFFFF" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Publisher</td>
+                            <td>
+                                <div class="form-group">
+                                    <input required id="text" class="publisher form-control" name="publisher"
+                                        placeholder="Publisher" type="text" />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Year</td>
+                            <td>
+                                <div class="form-group">
+                                    <input required id="text" class="year form-control" name="year"
+                                        placeholder="Year" type="number" />
+                                </div>
+                            </td>
+                        </tr>
+
+                        <!-- 
+
+                        <tr>
+                            <td>Year</td>
+                            <td>
+                                <div class="form-group">
+                                    <select required id="text" class="year form-control" name="year">
+                                        <option value="" selected disabled hidden>Year</option>
+                                        <option value="2010">2010</option>
+                                        <option value="2015">2015</option>
+                                        <option value="2017">2017</option>
+                                        <option value="2018">2018</option>
+                                    </select>
+                                </div>
+                            </td>
+                        </tr>
+
+                        -->
+                        
+                    </table>
+                </fieldset>
+            </form>
+            <button id="btn" class="btn btn-default ripple" data-ripple-color="#89669b"><span>Create</span></button>
+        </div>
+        <div class="cover">
+            <div class="item c_title" style="font-size: 100px">Title</div>
+            <div class="item c_subtitle" style="font-size: 70px">Subtitle</div>
+            <div class="item c_author" style="font-size: 60px">Author</div>
+            <div class="item c_publisher" style="font-size: 45px">Publisher</div>
+            <div class="item c_year" style="font-size: 100px">Year</div>
+        </div>
+    </div>
+</body>
+
+</html>
